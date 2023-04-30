@@ -32,9 +32,9 @@ class _HomePageState extends State<HomePage> {
         index: _selectedIndex,
         children: [
           MainPage(),
-          MyPhotoPage(),
-          MainPage(),
-          MyPhotoPage(),
+          MyNearPhotoPage(),
+          ReservationPage(),
+          MyNearPhotoPage(),
         ],
       ),
       bottomNavigationBar: buildNav(),
