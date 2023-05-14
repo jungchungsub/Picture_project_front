@@ -4,3 +4,5 @@ const gMainColor = Color(0xFFB275E8);
 const gSecondColor = Color(0xFFDABFF5);
 const gThirdColor = Color(0xFFE8D0FF);
 const gButtonColor = Color(0xFFBC70FF);
+
+const gDividerColor = Color(0xFFD6D6D6);

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:picture_project/constants.dart';
 import 'package:picture_project/view/components/components.dart';
+import 'package:picture_project/view/main/pages.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -94,12 +96,17 @@ class MainPage extends StatelessWidget {
   }
 
   Widget photoStore() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(color: gSecondColor, height: 72),
-        Container(color: gThirdColor, child: const Text('가게 이름')),
-      ],
+    return InkWell(
+      onTap: () {
+        Get.to(StoreInfoPage());
+      },
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(color: gSecondColor, height: 72),
+          Container(color: gThirdColor, child: const Text('가게 이름')),
+        ],
+      ),
     );
   }
 }
