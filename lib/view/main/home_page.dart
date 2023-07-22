@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:picture_project/constants.dart';
-import 'package:picture_project/view/components/components.dart';
 import 'package:picture_project/view/main/pages.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,6 +32,7 @@ class _HomePageState extends State<HomePage> {
           MainPage(),
           MyNearPhotoPage(),
           ReservationPage(),
+          FavoriteStorePage(),
           MyNearPhotoPage(),
         ],
       ),
@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
         navBarItem(const Icon(CupertinoIcons.home)),
         navBarItem(const Icon(CupertinoIcons.home)),
         navBarItem(const Icon(CupertinoIcons.home)),
+        navBarItem(const Icon(CupertinoIcons.heart)),
         navBarItem(const Icon(CupertinoIcons.person)),
       ],
     );

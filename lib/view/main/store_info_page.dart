@@ -92,30 +92,30 @@ class StoreInfoPage extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('증명사진', style: TextStyle(fontSize: 18)),
-              const Text('20,000 원 (List.generate)', style: TextStyle(fontSize: 18)),
+            children: const [
+              Text('증명사진', style: TextStyle(fontSize: 18)),
+              Text('20,000 원 (List.generate)', style: TextStyle(fontSize: 18)),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('여권사진', style: TextStyle(fontSize: 18)),
-              const Text('30,000 원', style: TextStyle(fontSize: 18)),
+            children: const [
+              Text('여권사진', style: TextStyle(fontSize: 18)),
+              Text('30,000 원', style: TextStyle(fontSize: 18)),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('취업사진', style: TextStyle(fontSize: 18)),
-              const Text('50,000 원', style: TextStyle(fontSize: 18)),
+            children: const [
+              Text('취업사진', style: TextStyle(fontSize: 18)),
+              Text('50,000 원', style: TextStyle(fontSize: 18)),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('프로필사진', style: TextStyle(fontSize: 18)),
-              const Text('100,000 원', style: TextStyle(fontSize: 18)),
+            children: const [
+              Text('프로필사진', style: TextStyle(fontSize: 18)),
+              Text('100,000 원', style: TextStyle(fontSize: 18)),
             ],
           ),
         ],
@@ -152,13 +152,13 @@ class StoreInfoPage extends StatelessWidget {
                 padding: const EdgeInsets.all(25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       '정충섭',
                       style: TextStyle(fontSize: 18),
                     ),
-                    const SizedBox(height: 10),
-                    const Text(
+                    SizedBox(height: 10),
+                    Text(
                       '이집 잘하네 (List.generate)',
                       style: TextStyle(fontSize: 18),
                     ),
@@ -179,13 +179,13 @@ class StoreInfoPage extends StatelessWidget {
                 padding: const EdgeInsets.all(25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       '정충섭',
                       style: TextStyle(fontSize: 18),
                     ),
-                    const SizedBox(height: 10),
-                    const Text(
+                    SizedBox(height: 10),
+                    Text(
                       '이집 잘하네 (List.generate)',
                       style: TextStyle(fontSize: 18),
                     ),
@@ -206,13 +206,13 @@ class StoreInfoPage extends StatelessWidget {
                 padding: const EdgeInsets.all(25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       '정충섭',
                       style: TextStyle(fontSize: 18),
                     ),
-                    const SizedBox(height: 10),
-                    const Text(
+                    SizedBox(height: 10),
+                    Text(
                       '이집 잘하네 (List.generate)',
                       style: TextStyle(fontSize: 18),
                     ),
@@ -237,15 +237,20 @@ class StoreInfoPage extends StatelessWidget {
             children: [
               Flexible(
                 flex: 4,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: gMainColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      '예약하기',
-                      style: TextStyle(color: Colors.white, fontSize: 26),
+                child: InkWell(
+                  onTap: () {
+                    Get.to(() => AddReservationPage());
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: gMainColor,
+                    ),
+                    child: Center(
+                      child: Text(
+                        '예약하기',
+                        style: TextStyle(color: Colors.white, fontSize: 26),
+                      ),
                     ),
                   ),
                 ),
